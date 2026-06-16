@@ -1,1 +1,12 @@
-<p>kiosk-nav works!</p>
+<header class="kiosk-header">
+    <div class="brand" routerLink="/">☕ COFFEE Oasis</div>
+    <div class="nav-actions">
+      <button class="nav-btn" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        📋 Menu
+      </button>
+      <button class="nav-btn cart-tray" routerLink="/checkout" routerLinkActive="active">
+        🛒 Order ({{ service.orderCount() }})
+      </button>
+    </div>
+  </header>
+  

@@ -1,1 +1,10 @@
-<p>menu works!</p>
+<main class="menu-view">
+    <div class="menu-grid">
+      @for (drink of menuItems(); track drink.id) {
+        <app-menu-item 
+          [item]="drink" 
+          (itemSelected)="handleAddItem($event)" />
+      }
+    </div>
+  </main>
+  

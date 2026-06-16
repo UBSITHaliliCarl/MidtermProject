@@ -1,1 +1,39 @@
-<p>checkout works!</p>
+<div class="checkout-view">
+    <h2>{{ kioskHeading() }}</h2>
+  
+    @if (order().length === 0) {
+      <div class="empty-kiosk">
+        <p>📭 Your basket is empty.</p>
+      </div>
+    } @else {
+      <div class="order-layout">
+        <div class="items-panel">
+          @for (basketItem of order(); track basketItem.id) {
+            <div class="checkout-row">
+              <div class="item-info">
+                <h3>{{ basketItem.name }}</h3>
+                <p>${{ formatPrice(basketItem.price) }} each</p>
+              </div>
+              <div class="qty-controls">
+                <button (click)="decrementItem(basketItem)">-</button>
+                <span class="qty-val">{{ basketItem.quantity }}</span>
+                <button (click)="incrementItem(basketItem)">+</button>
+              </div>
+            </div>
+          }
+        </div>
+  
+        <div class="summary-panel">
+          <div class="total-row">
+            <span>Total Amount:</span>
+            <span class="total-price">${{ orderTotal() }}</span>
+          </div>
+          <div class="kiosk-actions">
+            <button class="pay-btn" (click)="processPayment()">💳 Pay At Counter</button>
+            <button class="cancel-btn" (click)="clearAll()">❌ Cancel Order</button>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+  
