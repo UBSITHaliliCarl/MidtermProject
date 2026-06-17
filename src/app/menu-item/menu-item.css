@@ -1,0 +1,74 @@
+.kiosk-card {
+    background-color: #ffffff;
+    border: 1px solid #e6dfd5;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(111, 78, 55, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+ 
+.kiosk-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(111, 78, 55, 0.1);
+}
+ 
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+ 
+.category-pill {
+    background-color: #f4efe6;
+    color: #6f4e37;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+ 
+.item-price {
+    color: #1a1a1a;
+    font-weight: 800;
+    font-size: 1.25rem;
+}
+ 
+.item-name {
+    color: #1a1a1a;
+    margin: 0 0 8px 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+ 
+.item-desc {
+    color: #555555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0 0 24px 0;
+}
+ 
+.add-action-btn {
+    margin-top: auto;
+    background-color: #6f4e37;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+ 
+.add-action-btn:hover {
+    background-color: #513826;
+}
+ 
+.add-action-btn:active {
+    transform: scale(0.97);
+}

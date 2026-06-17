@@ -1,0 +1,162 @@
+.checkout-view {
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+ 
+.checkout-view h2 {
+    font-size: 2rem;
+    color: #1a1a1c;
+    margin-top: 0;
+    margin-bottom: 32px;
+    border-bottom: 2px solid #e6dfd5;
+    padding-bottom: 12px;
+}
+ 
+.empty-kiosk {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px dashed #c4a484;
+}
+ 
+.empty-kiosk p {
+    color: #6f4e37;
+    font-size: 1.25rem;
+    margin: 0;
+}
+ 
+.order-layout {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 40px;
+}
+ 
+ 
+.items-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+ 
+.checkout-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e6dfd5;
+}
+ 
+.item-info h3 {
+    margin: 0 0 4px 0;
+    font-size: 1.2rem;
+    color: #1a1a1a;
+}
+ 
+.item-info p {
+    margin: 0;
+    color: #6f4e37;
+    font-weight: 500;
+}
+ 
+.qty-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+ 
+.qty-controls button {
+    background-color: #f4efe6;
+    color: #1a1a1a;
+    border: 1px solid #e6dfd5;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s ease;
+}
+ 
+.qty-controls button:hover {
+    background-color: #e6dfd5;
+}
+ 
+.qty-val {
+    font-size: 1.2rem;
+    font-weight: 700;
+    min-width: 24px;
+    text-align: center;
+}
+ 
+.summary-panel {
+    background-color: #ffffff;
+    border: 2px solid #1a1a1a;
+    padding: 28px;
+    border-radius: 12px;
+    height: max-content;
+    position: sticky;
+    top: 40px;
+}
+ 
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+    color: #555555;
+}
+ 
+.total-price {
+    color: #1a1a1a;
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+ 
+.kiosk-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+ 
+.pay-btn {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+ 
+.pay-btn:hover {
+    opacity: 0.9;
+}
+ 
+.cancel-btn {
+    background-color: transparent;
+    color: #6f4e37;
+    border: 2px solid #e6dfd5;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+ 
+.cancel-btn:hover {
+    background-color: #fdfbf7;
+    border-color: #6f4e37;
+}
