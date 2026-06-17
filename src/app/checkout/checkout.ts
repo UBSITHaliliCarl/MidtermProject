@@ -24,12 +24,12 @@ export class Checkout {
 
   incrementItem(item: OrderItem): void {
     this.kioskService.updateQuantity(item.id, 1);
-    this.orderStatusChange.emit(`➕ Added 1x more ${item.name} to your tray.`);
+    this.orderStatusChange.emit(`+ Added 1x more ${item.name} to your tray.`);
   }
 
   decrementItem(item: OrderItem): void {
     this.kioskService.updateQuantity(item.id, -1);
-    this.orderStatusChange.emit(`➖ Reduced quantity or cleared ${item.name} from tray.`);
+    this.orderStatusChange.emit(`- Reduced quantity or cleared ${item.name} from tray.`);
   }
 
   clearAll(): void {
@@ -39,7 +39,7 @@ export class Checkout {
 
   processPayment(): void {
     const finalBill = this.orderTotal();
-    alert(`🎉 Transaction Complete!\nYour receipt totals: $${finalBill}\nThank you for choosing Coffee Oasis!`);
+    alert(`🎉 Transaction Complete!\nYour receipt totals: $${finalBill}\nThank you for choosing Carl's Coffee!`);
     this.kioskService.clearOrder();
     this.orderStatusChange.emit('✨ Registered checkout complete! Tray is cleared.');
   }
